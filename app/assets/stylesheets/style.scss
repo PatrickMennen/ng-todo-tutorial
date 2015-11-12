@@ -3,16 +3,17 @@
 body {
     font-family: 'open sans', sans-serif;
     font-size: 12pt;
+    background: url(../images/bg.jpg);
+    background-size: cover;
 }
 
 main {
+    background-color: rgba(255, 255, 255, .75);
     margin: 50px auto;
-
     box-shadow: 0 2px 2px 4px rgba(0, 0, 0, .15);
     padding: 8px;
     width: 800px;
     font-size: 20pt;
-
 
     ul#tasks {
         li {
@@ -24,6 +25,8 @@ main {
 
     form {
         display: flex;
+        border-top: 1px solid #bbb;
+        padding-top: 8px;
         input[type=text] {
             flex: 1;
             font-family: 'open sans', sans-serif;
@@ -33,7 +36,12 @@ main {
 
         input[type=button] {
             margin-left: auto;
-            font-size: 12pt;
+            font-size: 16pt;
+            background-color: #0c4387;
+            color: white;
+            border-radius: 16px;
+            border: none;
+            font-weight: bold;
         }
     }
 }
