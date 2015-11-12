@@ -7,16 +7,14 @@
   // Define globals exposed by modern browsers.
   "browser": true,
 
-  // Define globals exposed by jQuery.
-
   // Define globals exposed by Node.js.
   "node": true,
 
   // Allow ES6.
   "esnext": true,
   "globals": {
-    "angular": false,
-    "jquery": false
+    "angular": true,
+    "jquery": true
   },
 
   /*
