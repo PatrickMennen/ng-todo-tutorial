@@ -12,7 +12,7 @@
             <task task="task"></task>
         </ul>
 
-        <p ng-show="!completedAllTasks()">I have <strong>{{ tasks.length }}</strong> task(s), <strong>{{ countCompletedTasks() }}</strong> are complete remaining tasks <strong>{{ tasks.length - countCompletedTasks() }}</strong>.</p>
+        <p ng-show="!completedAllTasks()">I have <strong>{{ tasks.length }}</strong> task(s), <strong>{{ countCompletedTasks() }}</strong> completed <strong>{{ countRemainingTasks() }}</strong> remaining</strong>.</p>
         <p ng-if="completedAllTasks()">Hooray! looks like you are done for today</p>
 
         <form ng-submit="addTask()">

@@ -5,8 +5,12 @@
             return _.where($scope.tasks, { done: true }).length;
         };
 
-        $scope.completedAllTasks = function countCompletedTasks() {
-            return $scope.countCompletedTasks() === $scope.tasks.length;
+        $scope.countRemainingTasks = function countRemainingTasks() {
+            return $scope.tasks.length - $scope.countCompletedTasks();
+        };
+
+        $scope.completedAllTasks = function completedAllTasks() {
+            return $scope.countRemainingTasks() === 0;
         };
 
         $scope.addTask = function addTask() {
