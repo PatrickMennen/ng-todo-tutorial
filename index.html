@@ -8,16 +8,13 @@
 </head>
 <body ng-app="todoApp">
     <main ng-controller="todoController">
-        <ul id="tasks">
-            <li>Bring milk</li>
-            <li>Learn how to code angular</li>
-            <li class="done">Start this tutorial</li>
+        <ul id="tasks" ng-repeat="task in tasks">
+            <li>{{ task.text }}</li>
         </ul>
 
         <form>
             <input type="text" placeholder="Enter your very important task here"> <input type="button" value="Add task">
         </form>
-
     </main>
 
 <script src="bower_components/angular/angular.js"></script>
