@@ -12,8 +12,8 @@
             <li ng-class="{ 'done': task.done }">{{ task.text }}</li>
         </ul>
 
-        <form>
-            <input type="text" ng-model="newTask" placeholder="Enter your very important task here"> <input type="button" value="Add task" ng-click="addTask()">
+        <form ng-submit="addTask()">
+            <input type="text" ng-model="newTask" placeholder="Enter your very important task here"> <input type="submit" value="Add task">
         </form>
     </main>
 

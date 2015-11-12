@@ -23,7 +23,7 @@ main {
       font-family: 'open sans', sans-serif;
       font-size: 20pt;
       margin-right: 10px; }
-    main form input[type=button] {
+    main form input[type=submit] {
       margin-left: auto;
       font-size: 16pt;
       background-color: #0c4387;
