@@ -8,12 +8,12 @@
 </head>
 <body ng-app="todoApp">
     <main ng-controller="todoController">
-        <ul id="tasks" ng-repeat="task in tasks">
+        <ul id="tasks" ng-repeat="task in tasks | orderBy:'-'">
             <li ng-class="{ 'done': task.done }">{{ task.text }}</li>
         </ul>
 
         <form>
-            <input type="text" placeholder="Enter your very important task here"> <input type="button" value="Add task">
+            <input type="text" ng-model="newTask" placeholder="Enter your very important task here"> <input type="button" value="Add task" ng-click="addTask()">
         </form>
     </main>
 
