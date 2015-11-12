@@ -1,0 +1,39 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+    font-family: 'open sans', sans-serif;
+    font-size: 12pt;
+}
+
+main {
+    margin: 50px auto;
+
+    box-shadow: 0 2px 2px 4px rgba(0, 0, 0, .15);
+    padding: 8px;
+    width: 800px;
+    font-size: 20pt;
+
+
+    ul#tasks {
+        li {
+            &.done {
+                text-decoration: line-through;
+            }
+        }
+    }
+
+    form {
+        display: flex;
+        input[type=text] {
+            flex: 1;
+            font-family: 'open sans', sans-serif;
+            font-size: 20pt;
+            margin-right: 10px;
+        }
+
+        input[type=button] {
+            margin-left: auto;
+            font-size: 12pt;
+        }
+    }
+}
