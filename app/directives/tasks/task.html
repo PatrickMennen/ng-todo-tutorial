@@ -1,1 +1,6 @@
-<li ng-class="{ 'done': task.done }"><label><input type="checkbox" ng-model="task.done" /> {{ task.text }}</label></li>
+<li ng-class="{ 'done': task.done }">
+    <label>
+        <input type="checkbox" ng-model="task.done" /> {{ task.text }}
+    </label>
+    <button type="button" ng-click="onDelete()">Delete me</button>
+</li>

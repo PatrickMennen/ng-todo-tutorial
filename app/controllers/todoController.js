@@ -20,6 +20,13 @@
             }
         };
 
+        $scope.deleteTask = function deleteTask(task) {
+            var taskIndex = $scope.tasks.indexOf(task);
+            if (taskIndex !== -1) {
+                $scope.tasks.splice(taskIndex, 1);
+            }
+        };
+
         $scope.tasks = [
             { text: 'Remember that Angular is NOT jQuery', done: false },
             { text: 'Bring milk', done: false },

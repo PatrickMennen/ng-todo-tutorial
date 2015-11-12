@@ -18,9 +18,19 @@ main {
     ul#tasks {
         li {
             list-style-type: none;
+            display: flex;
             &.done {
                 text-decoration: line-through;
                 color: #999;
+            }
+
+            label {
+                flex: 1;
+            }
+
+            button {
+                margin-left: auto;
+                text-decoration: none !important;
             }
         }
     }

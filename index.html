@@ -9,7 +9,7 @@
 <body ng-app="todoApp">
     <main ng-controller="todoController">
         <ul id="tasks" ng-repeat="task in tasks | orderBy:'-'">
-            <task task="task"></task>
+            <task task="task" on-delete="deleteTask(task)"></task>
         </ul>
 
         <p ng-show="!completedAllTasks()">I have <strong>{{ tasks.length }}</strong> task(s), <strong>{{ countCompletedTasks() }}</strong> completed <strong>{{ countRemainingTasks() }}</strong> remaining</strong>.</p>

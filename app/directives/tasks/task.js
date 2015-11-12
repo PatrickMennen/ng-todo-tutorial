@@ -5,9 +5,10 @@
             restrict: 'E',
             replace: true,
             scope: {
-                task: '='
+                task: '=',
+                onDelete: '&'
             },
-            templateUrl: 'app/directives/tasks/task.html'
+            templateUrl: 'app/directives/tasks/task.html',
         };
     }]);
 })(angular.module('todoApp'));
