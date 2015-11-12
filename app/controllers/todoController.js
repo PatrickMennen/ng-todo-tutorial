@@ -1,6 +1,14 @@
 (function (ng) {
     'use strict';
     ng.controller('todoController', ['$scope', function ($scope) {
+        $scope.countCompletedTasks = function countCompletedTasks() {
+            return _.where($scope.tasks, { done: true }).length;
+        };
+
+        $scope.completedAllTasks = function countCompletedTasks() {
+            return $scope.countCompletedTasks() === $scope.tasks.length;
+        };
+
         $scope.addTask = function addTask() {
             if ($scope.newTask) {
                 $scope.tasks.push({ text: $scope.newTask, done: false });

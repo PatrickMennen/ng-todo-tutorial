@@ -12,12 +12,16 @@
             <task task="task"></task>
         </ul>
 
+        <p ng-show="!completedAllTasks()">I have <strong>{{ tasks.length }}</strong> task(s), <strong>{{ countCompletedTasks() }}</strong> are complete remaining tasks <strong>{{ tasks.length - countCompletedTasks() }}</strong>.</p>
+        <p ng-if="completedAllTasks()">Hooray! looks like you are done for today</p>
+
         <form ng-submit="addTask()">
             <input type="text" ng-model="newTask" placeholder="Enter your very important task here"> <input type="submit" value="Add task">
         </form>
     </main>
 
 <script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/lodash/lodash.js"></script>
 <script src="app/main.js"></script>
 <script src="app/controllers/todoController.js"></script>
 <script src="app/directives/tasks/task.js"></script>
