@@ -12,8 +12,11 @@ main {
   padding: 8px;
   width: 800px;
   font-size: 20pt; }
-  main ul#tasks li.done {
-    text-decoration: line-through; }
+  main ul#tasks li {
+    list-style-type: none; }
+    main ul#tasks li.done {
+      text-decoration: line-through;
+      color: #999; }
   main form {
     display: flex;
     border-top: 1px solid #bbb;
