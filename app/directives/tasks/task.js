@@ -1,6 +1,6 @@
 (function (ng) {
     'use strict';
-    ng.directive('task', [function () {
+    ng.directive('task', [ function () {
         return {
             restrict: 'E',
             replace: true,
