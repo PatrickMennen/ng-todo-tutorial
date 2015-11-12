@@ -14,14 +14,24 @@ main {
   font-size: 20pt; }
   main ul#tasks li {
     list-style-type: none;
-    display: flex; }
-    main ul#tasks li.done {
+    display: flex;
+    align-items: center; }
+    main ul#tasks li:hover {
+      background-color: rgba(120, 120, 120, 0.15); }
+    main ul#tasks li.done label {
       text-decoration: line-through;
       color: #999; }
     main ul#tasks li label {
       flex: 1; }
     main ul#tasks li button {
-      margin-left: auto;
+      padding: 0;
+      margin: 0;
+      width: 24px;
+      height: 24px;
+      border: none;
+      border-radius: 10px;
+      background-color: #780000;
+      color: white;
       text-decoration: none !important; }
   main form {
     display: flex;

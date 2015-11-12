@@ -19,9 +19,17 @@ main {
         li {
             list-style-type: none;
             display: flex;
+            align-items: center;
+
+            &:hover {
+                background-color: rgba(120, 120, 120, 0.15);
+            }
+
             &.done {
-                text-decoration: line-through;
-                color: #999;
+                label {
+                    text-decoration: line-through;
+                    color: #999;
+                }
             }
 
             label {
@@ -29,7 +37,14 @@ main {
             }
 
             button {
-                margin-left: auto;
+                padding: 0;
+                margin: 0;
+                width: 24px;
+                height: 24px;
+                border: none;
+                border-radius: 10px;
+                background-color: rgb(120, 0, 0);
+                color: white;
                 text-decoration: none !important;
             }
         }
