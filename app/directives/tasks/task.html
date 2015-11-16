@@ -1,6 +1,14 @@
 <li ng-class="{ 'done': task.done }">
-    <label>
+    <label ng-if="!editable">
         <input type="checkbox" ng-model="task.done" /> {{ task.text }}
     </label>
-    <button ng-click="onDelete()">X</button>
+
+    <div ng-show="editable">
+        <form ng-submit="toggleEditable()">
+            <input ng-show="editable" type="text" ng-model="task.text">
+        </form>
+    </div>
+
+    <button class="edit" ng-click="toggleEditable()">E</button>
+    <button class="delete" ng-click="onDelete()">X</button>
 </li>

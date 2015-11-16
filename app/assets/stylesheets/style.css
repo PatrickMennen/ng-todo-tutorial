@@ -21,7 +21,7 @@ main {
     main ul#tasks li.done label {
       text-decoration: line-through;
       color: #999; }
-    main ul#tasks li label {
+    main ul#tasks li label, main ul#tasks li div {
       flex: 1; }
     main ul#tasks li button {
       padding: 0;
@@ -30,9 +30,12 @@ main {
       height: 24px;
       border: none;
       border-radius: 10px;
-      background-color: #780000;
-      color: white;
-      text-decoration: none !important; }
+      color: white; }
+      main ul#tasks li button.edit {
+        background-color: #007800;
+        margin-right: 4px; }
+      main ul#tasks li button.delete {
+        background-color: #780000; }
   main form {
     display: flex;
     border-top: 1px solid #bbb;
